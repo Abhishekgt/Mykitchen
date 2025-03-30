@@ -3,38 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Sharing App</title>
+    <title>Mykitchen</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-
     <header>
-        <h1>Recipe Sharing App</h1>
+        <h1>🍽 Mykitchen</h1>
         <nav>
             <ul>
                 <li><a href="#" onclick="showSection('home')">Home</a></li>
                 <li><a href="#" onclick="showSection('add-recipe')">Add Recipe</a></li>
                 <li><a href="#" onclick="showSection('view-recipes')">View Recipes</a></li>
-                <li><button id="dark-mode-toggle">Dark Mode</button></li>
+                <li><button id="dark-mode-toggle">🌙 Dark Mode</button></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home">
+        <section id="home" class="section">
             <h2>Welcome to the Recipe Sharing App</h2>
-            <p>Share and explore delicious recipes.</p>
+            <p>Discover, share, and explore delicious recipes from around the world.</p>
         </section>
 
-        <section id="add-recipe" class="hidden">
+        <section id="add-recipe" class="section hidden">
             <h2>Add a New Recipe</h2>
-            <form id="recipe-form">
+            <form id="recipe-form" class="form-container">
                 <label for="recipe-name">Recipe Name:</label>
-                <input type="text" id="recipe-name" required>
+                <input type="text" id="recipe-name" placeholder="Enter recipe name" required>
 
                 <label for="ingredients">Ingredients:</label>
-                <textarea id="ingredients" required></textarea>
+                <textarea id="ingredients" placeholder="List ingredients here" required></textarea>
 
                 <label for="category">Category:</label>
                 <select id="category">
@@ -46,31 +45,31 @@
                 </select>
 
                 <label for="preparation">Preparation Steps:</label>
-                <textarea id="preparation" required></textarea>
+                <textarea id="preparation" placeholder="Describe preparation steps" required></textarea>
 
-                <button type="submit">Add Recipe</button>
+                <button type="submit" class="btn">➕ Add Recipe</button>
             </form>
         </section>
 
-        <section id="view-recipes" class="hidden">
+        <section id="view-recipes" class="section hidden">
             <h2>Recipe Collection</h2>
-            <label for="filter">Filter by Category:</label>
-            <select id="filter">
-                <option value="All">All</option>
-                <option value="Breakfast">Breakfast</option>
-                <option value="Lunch">Lunch</option>
-                <option value="Dinner">Dinner</option>
-                <option value="Dessert">Dessert</option>
-                <option value="Drinks">Drinks</option>
-            </select>
-
-            <div id="recipes-container"></div>
+            <div class="filter-container">
+                <label for="filter">Filter by Category:</label>
+                <select id="filter">
+                    <option value="All">All</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Drinks">Drinks</option>
+                </select>
+            </div>
+            <div id="recipes-container" class="recipes-grid"></div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Recipe Sharing App</p>
+        <p>&copy; 2025 Recipe Sharing App | Created with ❤</p>
     </footer>
-
 </body>
 </html>
